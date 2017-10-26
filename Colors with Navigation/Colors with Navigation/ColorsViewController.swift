@@ -9,13 +9,9 @@
 import UIKit
 
 class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    struct color {
-        var name: String
-        var swiftColor: UIColor
-    }
     
-    var allColors = [color]()
+    @IBOutlet weak var colorTableView: UITableView!
+    var allColors = [Color]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allColors.count
@@ -29,18 +25,21 @@ class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isSelected = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        let color1 = color(name:"red", swiftColor:UIColor.red)
-        let color2 = color(name:"orange", swiftColor:UIColor.orange)
-        let color3 = color(name:"yellow", swiftColor:UIColor.yellow)
-        let color4 = color(name:"green", swiftColor:UIColor.green)
-        let color5 = color(name:"blue", swiftColor:UIColor.blue)
-        let color6 = color(name:"purple", swiftColor:UIColor.purple)
-        let color7 = color(name:"brown", swiftColor:UIColor.brown)
+        let color1 = Color(name:"red", swiftColor:UIColor.red)
+        let color2 = Color(name:"orange", swiftColor:UIColor.orange)
+        let color3 = Color(name:"yellow", swiftColor:UIColor.yellow)
+        let color4 = Color(name:"green", swiftColor:UIColor.green)
+        let color5 = Color(name:"blue", swiftColor:UIColor.blue)
+        let color6 = Color(name:"purple", swiftColor:UIColor.purple)
+        let color7 = Color(name:"brown", swiftColor:UIColor.brown)
         
         allColors += [color1, color2, color3, color4, color5, color6, color7]
         // Do any additional setup after loading the view.
@@ -52,14 +51,16 @@ class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? ColorDetailViewController,
+        let row = colorTableView.indexPathForSelectedRow?.row {
+            destination.color = allColors[row]
+        }
     }
-    */
+ 
 
 }

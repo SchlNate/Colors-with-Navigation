@@ -12,6 +12,8 @@
 		FF154B801FA176CA000F7DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF154B7F1FA176CA000F7DB3 /* Assets.xcassets */; };
 		FF154B831FA176CA000F7DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF154B811FA176CA000F7DB3 /* LaunchScreen.storyboard */; };
 		FF154B8B1FA177DA000F7DB3 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF154B8A1FA177DA000F7DB3 /* ColorsViewController.swift */; };
+		FF154B8D1FA17C7E000F7DB3 /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF154B8C1FA17C7E000F7DB3 /* ColorDetailViewController.swift */; };
+		FF154B8F1FA17E5A000F7DB3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF154B8E1FA17E5A000F7DB3 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FF154B821FA176CA000F7DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF154B841FA176CA000F7DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF154B8A1FA177DA000F7DB3 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		FF154B8C1FA17C7E000F7DB3 /* ColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
+		FF154B8E1FA17E5A000F7DB3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				FF154B811FA176CA000F7DB3 /* LaunchScreen.storyboard */,
 				FF154B841FA176CA000F7DB3 /* Info.plist */,
 				FF154B8A1FA177DA000F7DB3 /* ColorsViewController.swift */,
+				FF154B8C1FA17C7E000F7DB3 /* ColorDetailViewController.swift */,
+				FF154B8E1FA17E5A000F7DB3 /* Color.swift */,
 			);
 			path = "Colors with Navigation";
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF154B8D1FA17C7E000F7DB3 /* ColorDetailViewController.swift in Sources */,
+				FF154B8F1FA17E5A000F7DB3 /* Color.swift in Sources */,
 				FF154B8B1FA177DA000F7DB3 /* ColorsViewController.swift in Sources */,
 				FF154B791FA176CA000F7DB3 /* AppDelegate.swift in Sources */,
 			);
